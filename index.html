@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shravani Dorlikar — Product Manager</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+<style>
+:root{
+--blue:#2f6bff;
+--blue-soft:#eaf1ff;
+--dark:#0f1c2e;
+--text:#1f2937;
+--muted:#6b7280;
+--border:#e5e7eb;
+--bg:#fafbff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Inter,sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.65;
+}
+
+a{text-decoration:none;color:inherit}
+
+/* Animations */
+.reveal{opacity:0;transform:translateY(30px);animation:reveal 1s ease forwards}
+@keyframes reveal{to{opacity:1;transform:none}}
+
+.card{transition:.35s}
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(47,107,255,.15)
+}
+
+/* NAV */
+nav{
+max-width:1200px;
+margin:auto;
+padding:24px;
+display:flex;
+justify-content:space-between;
+align-items:center
+}
+nav a{margin-left:22px;font-size:14px;color:var(--muted)}
+.cta{
+background:var(--blue);
+color:#fff;
+padding:10px 18px;
+border-radius:999px;
+font-weight:500
+}
+
+/* HERO */
+.hero{
+max-width:1200px;
+margin:40px auto;
+padding:60px;
+background:linear-gradient(135deg,#f4f7ff,#fff);
+border-radius:22px;
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:40px;
+align-items:center
+}
+.hero h5{
+color:var(--blue);
+font-size:14px;
+margin-bottom:10px
+}
+.hero h1{
+font-family:"Playfair Display",serif;
+font-size:48px;
+line-height:1.15;
+margin-bottom:18px
+}
+.hero h1 span{color:var(--blue)}
+
+.buttons{display:flex;gap:14px;margin-bottom:22px}
+.btn{
+padding:14px 24px;
+border-radius:999px;
+font-size:14px;
+font-weight:500;
+display:inline-flex;
+align-items:center;
+gap:8px
+}
+.primary{background:var(--blue);color:#fff}
+.secondary{border:1px solid var(--border);background:#fff}
+
+.metrics{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:14px;
+margin-top:20px;
+font-size:14px;
+color:var(--muted)
+}
+.metric i{color:var(--blue);margin-right:6px}
+
+.hero img{
+width:100%;
+border-radius:20px;
+border:6px solid var(--blue-soft)
+}
+
+/* SECTION */
+.section{
+max-width:1200px;
+margin:90px auto
+}
+.section h2{font-size:32px;margin-bottom:8px}
+.section p{color:var(--muted);margin-bottom:36px}
+
+/* EXPERIENCE / PROJECTS */
+.block{
+background:#fff;
+border-radius:18px;
+padding:36px;
+border:1px solid var(--border);
+margin-bottom:28px
+}
+.block h3{font-size:20px}
+.block span{font-size:13px;color:var(--muted)}
+.block ul{margin-top:16px}
+.block li{
+list-style:none;
+margin-bottom:12px;
+font-size:14px
+}
+.block li i{color:var(--blue);margin-right:8px}
+
+/* SKILLS */
+.skills{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:28px
+}
+.skill{
+background:#fff;
+border-radius:18px;
+padding:30px;
+border:1px solid var(--border)
+}
+.skill h4{
+color:var(--blue);
+margin-bottom:12px;
+display:flex;
+align-items:center;
+gap:8px
+}
+.skill p{
+font-size:14px;
+color:var(--muted);
+line-height:1.7
+}
+
+/* EDUCATION */
+.edu{
+background:#fff;
+border-radius:18px;
+padding:30px;
+border:1px solid var(--border);
+margin-bottom:20px
+}
+
+/* CONTACT */
+.contact{
+max-width:1200px;
+margin:90px auto;
+padding:60px;
+background:linear-gradient(135deg,#fff,#f3f6ff);
+border-radius:22px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px
+}
+input,textarea{
+width:100%;
+padding:14px;
+border-radius:12px;
+border:1px solid var(--border);
+margin-bottom:14px
+}
+
+footer{
+text-align:center;
+padding:40px;
+font-size:13px;
+color:var(--muted)
+}
+
+@media(max-width:900px){
+.hero,.contact{grid-template-columns:1fr}
+.skills{grid-template-columns:1fr}
+.hero h1{font-size:38px}
+}
+</style>
+</head>
+
+<body>
+
+<nav class="reveal">
+<strong>by Shravani Dorlikar</strong>
+<div>
+<a href="#education">Education</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact" class="cta">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero reveal">
+<div>
+<h5><i class='bx bx-briefcase'></i> Product Management Graduate Student | Product Manager</h5>
+
+<h1>
+Driving <span>data-driven product decisions</span><br>
+across enterprise, AI, and CRM systems.
+</h1>
+
+
+
+<p>
+Product Management graduate student with proven ability to drive
+<strong>70% product adoption</strong> and
+<strong>45% user satisfaction improvement</strong>
+through data-driven decision-making and Agile methodologies.
+Expertise in low-code/no-code platforms, AI-powered automation, and CRM systems.
+</p>
+
+<div class="metrics">
+<div class="metric"><i class='bx bx-trending-up'></i>70% product adoption</div>
+<div class="metric"><i class='bx bx-smile'></i>45% CSAT increase</div>
+<div class="metric"><i class='bx bx-dollar'></i>$5K quarterly savings</div>
+<div class="metric"><i class='bx bx-group'></i>12+ member teams</div>
+</div>
+</div>
+
+<img src="shravi.jpeg" alt="Shravani Dorlikar">
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section reveal">
+<h2><i class='bx bx-buildings'></i> Professional Experience</h2>
+
+<div class="block card">
+<h3>Support Engineer — InBody India</h3>
+<span>Jun 2024 – Jun 2025 | Mumbai, India</span>
+<ul>
+<li><i class='bx bx-cog'></i>Architected and launched enterprise CRM across 28 states, processing 150+ daily requests with 98% resolution, reducing costs by $5K quarterly</li>
+<li><i class='bx bx-pulse'></i>Led InBody Touch diagnostic system from concept to launch, achieving 60% cost reduction and 35% diagnostic accuracy improvement</li>
+<li><i class='bx bx-timer'></i>Managed Agile team of 12 engineers, reducing resolution time by 80% and improving NPS by 42 points</li>
+<li><i class='bx bx-bar-chart'></i>Used Power BI & SQL analytics to identify top 15 pain points, increasing retention by 28% and reducing churn from 18% to 13%</li>
+</ul>
+</div>
+
+<div class="block card">
+<h3>Product Development Intern — Fuse Bytes</h3>
+<span>Feb 2023 – May 2023 | Mumbai, India</span>
+<ul>
+<li><i class='bx bx-rocket'></i>Delivered 2 high-impact CRM features via 4 Agile sprints, achieving 70% adoption among 2,500+ daily users</li>
+<li><i class='bx bx-test-tube'></i>Optimized performance using A/B testing, reducing load time by 30% and increasing CSAT from 72 → 87</li>
+<li><i class='bx bx-check-circle'></i>Resolved 15 high-priority UI/UX issues and shipped features 2 weeks ahead of schedule</li>
+</ul>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section reveal">
+<h2><i class='bx bx-layer'></i> Projects</h2>
+
+<div class="block card">
+<h3>VLABS Digital Communication Platform</h3>
+<span>Global Online Laboratory Consortium Winner 2024</span>
+<a href="https://vlabsproject.github.io/HomePage_final/" target="_blank" style="font-size:14px;color:#2f6bff;display:inline-block;margin-top:6px">
+View project →
+</a>
+
+<ul>
+<li><i class='bx bx-search'></i>Owned full product lifecycle: discovery, personas, requirements, and roadmap</li>
+<li><i class='bx bx-line-chart'></i>Achieved 85% engagement and 40% improvement in learning outcomes for 300+ users</li>
+<li><i class='bx bx-code'></i>Built ReactJS simulation modules and iterated using analytics to reach 100% curriculum alignment</li>
+</ul>
+</div>
+
+<div class="block card">
+<h3>Web Registration System — Samarth Vasantik Kreeda Prashikshan Shibir</h3>
+<span>2024</span>
+<a href="https://github.com/pratham5685/dadar-vyam-mandir" target="_blank" style="font-size:14px;color:#2f6bff;display:inline-block;margin-top:6px">View project →</a>
+<ul>
+<li><i class='bx bx-group'></i>Led end-to-end development for 500+ participants across 5 non-profit stakeholders</li>
+<li><i class='bx bx-bot'></i>Integrated Zapier automation reducing manual processing by 90%</li>
+<li><i class='bx bx-star'></i>Achieved 98% user satisfaction and delivered 2 weeks ahead of schedule</li>
+</ul>
+</div>
+
+<div class="block card">
+<h3>RUST-E — AI-Powered Corrosion Monitoring</h3>
+<span>AVEVA Innovation Challenge 2025</span>
+<a href="https://rust-e-integrity-monitoring-348001697648.us-west1.run.app/" target="_blank" style="font-size:14px;color:#2f6bff;display:inline-block;margin-top:6px">View project →</a>
+
+<ul>
+<li><i class='bx bx-brain'></i>Managed edge-AI product achieving 94% detection accuracy</li>
+<li><i class='bx bx-time'></i>Designed system with potential to reduce inspection time by 75%</li>
+<li><i class='bx bx-bulb'></i>Presented business case, pricing, and GTM strategy to judges</li>
+</ul>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section reveal">
+<h2><i class='bx bx-wrench'></i> Skills</h2>
+
+<div class="skills" style="
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:28px;
+">
+
+  <div class="skill card" style="
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    border:1px solid #e5e7eb;
+  ">
+    <h4 style="color:#2f6bff;margin-bottom:12px;display:flex;align-items:center;gap:8px">
+      <i class='bx bx-map'></i> Product Strategy & Execution
+    </h4>
+    <p style="font-size:14px;color:#6b7280;line-height:1.7">
+      Product Roadmapping, Agile/Scrum, Sprint Planning, Feature Prioritization (RICE, MoSCoW), A/B Testing, Go-to-Market Strategy, Product Analytics, OKRs, User Story Mapping, Competitive Analysis, Product-Market Fit
+    </p>
+  </div>
+
+  <div class="skill card" style="
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    border:1px solid #e5e7eb;
+  ">
+    <h4 style="color:#2f6bff;margin-bottom:12px;display:flex;align-items:center;gap:8px">
+      <i class='bx bx-chip'></i> Low-Code / No-Code & Automation
+    </h4>
+    <p style="font-size:14px;color:#6b7280;line-height:1.7">
+      Power Apps, Microsoft Power Automate, Zapier, Airtable, Retool, Workflow Automation, Process Optimization, API Integration
+    </p>
+  </div>
+
+  <div class="skill card" style="
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    border:1px solid #e5e7eb;
+  ">
+    <h4 style="color:#2f6bff;margin-bottom:12px;display:flex;align-items:center;gap:8px">
+      <i class='bx bx-brain'></i> AI & Machine Learning
+    </h4>
+    <p style="font-size:14px;color:#6b7280;line-height:1.7">
+      AI Product Integration, Generative AI Applications, ML Model Deployment, Predictive Analytics, Edge AI
+    </p>
+  </div>
+
+  <div class="skill card" style="
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    border:1px solid #e5e7eb;
+  ">
+    <h4 style="color:#2f6bff;margin-bottom:12px;display:flex;align-items:center;gap:8px">
+      <i class='bx bx-code-alt'></i> Technical & Data
+    </h4>
+    <p style="font-size:14px;color:#6b7280;line-height:1.7">
+      SQL, Python, JavaScript, ReactJS, HTML/CSS, Git, RESTful APIs, Jira, Confluence, Figma
+    </p>
+  </div>
+
+  <!-- LAST CARD: FULL WIDTH -->
+  <div class="skill card" style="
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    border:1px solid #e5e7eb;
+    grid-column:1 / -1;
+  ">
+    <h4 style="color:#2f6bff;margin-bottom:12px;display:flex;align-items:center;gap:8px">
+      <i class='bx bx-palette'></i> Research & Design
+    </h4>
+    <p style="font-size:14px;color:#6b7280;line-height:1.7">
+      User Research, Customer Journey Mapping, Wireframing, Prototyping, Usability Testing, Jobs-to-Be-Done
+    </p>
+  </div>
+
+</div>
+
+
+
+</section>
+
+
+<!-- EDUCATION -->
+<section style="max-width:1200px;margin:90px auto;font-family:Inter,sans-serif">
+
+  <h2 style="font-size:32px;margin-bottom:28px;color:#1f2937">
+    <i class='bx bx-graduation' style="color:#2f6bff;margin-right:6px"></i>
+    Education & Awards
+  </h2>
+
+  <!-- Masters -->
+  <div style="
+    background:#ffffff;
+    border-radius:18px;
+    padding:30px;
+    border:1px solid #e5e7eb;
+    margin-bottom:22px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.03);
+  ">
+
+    <strong style="font-size:18px;color:#0f1c2e">
+      Master of Science — Management of Technology
+    </strong>
+
+    <div style="margin-top:8px;color:#6b7280;font-size:14px;line-height:1.6">
+      <i class='bx bx-buildings' style="margin-right:6px"></i>
+      New York University, Tandon School of Engineering
+      <br>
+      <i class='bx bx-calendar' style="margin-right:6px"></i>
+      2025 – 2027 | New York, USA
+    </div>
+
+  </div>
+
+  <!-- Bachelors -->
+  <div style="
+    background:#ffffff;
+    border-radius:18px;
+    padding:30px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 10px 25px rgba(0,0,0,0.03);
+  ">
+
+    <strong style="font-size:18px;color:#0f1c2e">
+      
+      Bachelor of Technology — Electronics & Telecommunication
+    </strong>
+
+    <div style="margin-top:8px;color:#6b7280;font-size:14px;line-height:1.6">
+      <i class='bx bx-buildings' style="margin-right:6px"></i>
+      Vidyalankar Institute of Technology
+      <br>
+      <i class='bx bx-calendar' style="margin-right:6px"></i>
+      2020 – 2024 | Mumbai, India
+    </div>
+
+    <div style="margin-top:14px;font-size:14px;color:#1f2937">
+      <i class='bx bx-bar-chart-alt-2' style="color:#2f6bff;margin-right:6px"></i>
+      <strong>CGPA:</strong> 8.25 / 10
+    </div>
+
+    <div style="margin-top:10px;font-size:14px;color:#1f2937">
+      <i class='bx bx-trophy' style="color:#2f6bff;margin-right:6px"></i>
+      <strong>Awards:</strong>
+      Global Online Laboratory Consortium Winner 2024,
+      Smart India Hackathon Finalist 2022
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact reveal" style="
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+">
+
+  <div>
+    <h2 style="margin-bottom:16px">
+      <i class='bx bx-envelope'></i> Contact
+    </h2>
+
+    <p style="line-height:1.8">
+      <i class='bx bx-map'></i> Brooklyn, New York<br>
+      <i class='bx bx-mail-send'></i> ssd9840@nyu.edu<br>
+      <i class='bx bx-phone'></i> +1 929-774-6781<br>
+      <i class='bx bxl-linkedin'></i> linkedin.com/in/shravi29
+    </p>
+  </div>
+
+</section>
+
+
+<footer>
+© 2025 Shravani Dorlikar · Product Management · NYU
+</footer>
+
+</body>
+</html>
